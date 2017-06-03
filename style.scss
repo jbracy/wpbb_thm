@@ -1,0 +1,297 @@
+/*
+Theme Name: Beach Basic
+Theme URI:
+Author: Jordan Bracy
+Author URI: http://www.thebracybunch.com
+Description: A basic theme inspired by beaches.
+Version: .1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu
+Text Domain: jeb_beach_basic
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Define our colors */
+$base-blue: #61A9D6;
+$dark-blue: #3085ba;
+$light-blue: #9ecae6;
+$light-grey: #e6e6e6;
+$sand: #C2B5B1;
+$sand-dark: #9B908D;
+$off-white: #e6e6e6;
+$white: #fff;
+
+/* Override some foundation defaults */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.row {
+  max-width: 90rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: $off-white;
+}
+img.rounded-image {
+  border: 1px solid #979797;
+  border-radius: 100px;
+}
+blockquote {
+  font-size: 2rem;
+  margin: 0 3rem;
+}
+
+input[type="submit"]
+{
+  border-radius: 5px;
+  background-color: $base-blue;
+  border-top-style: none;
+  border-left-style: none;
+  border-bottom-style: none;
+  border-right-style: none;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.50);
+  color: #fefefe;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 1rem;
+  padding: .85em 1em;
+  font-size: .9rem;
+  line-height: 1;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+    background-color: $dark-blue;
+    box-shadow: none;
+  }
+}
+span.badge {
+  padding-bottom: .5em;
+  padding-left: .5em;
+}
+
+/*add some wp defaults*/
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+
+/* main header elements */
+.header {
+text-align: center;
+background: $base-blue;
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  .headline {
+    color: $white;
+    a {
+      color: $white;
+    }
+  }
+
+  nav {
+    div.menu-centered {
+      height: 2.46em;
+      .menu {
+        li.is-dropdown-submenu-parent {
+          a {
+            &:after {
+              border-color: $white transparent transparent;
+            }
+          }
+          ul {
+            border: none;
+            background-color: $light-blue;
+            a {
+              &:hover {
+                color: $white;
+              }
+            }
+          }
+        }
+        a {
+          color: $white;
+          &:hover {
+            background-color: $dark-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+div.title-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+/* main content area */
+section.main-content .posts-row .column {
+  padding-top: 1rem;
+
+  .excerpt {
+    min-height: 9.4rem;
+  }
+}
+
+div.main-row {
+  .small-12 {
+    margin-bottom: 3rem;
+  }
+}
+
+div.main-row {
+  margin-top: 2rem;
+  ul {
+    list-style: none;
+  }
+}
+
+.button.round {
+  border-radius: 5px;
+  background-color: $base-blue;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.50);
+  &:hover {
+    background-color: $dark-blue;
+    box-shadow: none;
+  }
+}
+
+.pagination li {
+  border: 1px solid #cacaca;
+}
+
+div.callout {
+  border-radius: 10px;
+}
+
+.post {
+  margin: 1rem;
+}
+
+#comments .comment {
+  margin: 1rem;
+}
+
+#comments .comment-list .children {
+  border-left: 1px solid #c0c0c0;
+  margin-left: 3rem;
+}
+
+.comment-level-2{
+  border-left: 1px solid #979797;
+}
+
+.comment-respond {
+  a#cancel-comment-reply-link {
+    color: #cc4b37;
+    float: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    &:hover {
+      color: #913425;
+    }
+  }
+}
+
+.sidebar {
+  border-left: 1px solid #cacaca;
+}
+.accordion-title::before{
+  content: none;
+}
+
+.widget-title {
+  text-align: center;
+}
+
+section.widget ul {
+  text-align: center;
+}
+
+footer {
+  background-color: $sand;
+  margin: 20px 0 0 0;
+  padding-top: 1rem;
+}
+
+footer .sub-footer {
+  background-color: $sand-dark;
+  padding-top: 1rem;
+  @media only screen and (max-width: 580px) {
+    margin: 0 0 2rem 0;
+  }
+}
+
+
+
+#offCanvasBottom {
+  background-color: $base-blue;
+  .menu {
+        margin: 1rem;
+        a {
+          color: $white;
+        }
+        a::after{
+          border-color: transparent transparent transparent $white;
+        }
+        a::before {
+          border-color: transparent $white transparent transparent ;
+        }
+        a:hover, a:active{
+          background-color: $dark-blue;
+        }
+        li ul {
+          background-color: $base-blue;
+        }
+  }
+}
+
+div.title-bar {
+  background-color: $base-blue;
+  box-shadow: 0 0 10px hsla(0, 0%, 4%, .7);
+  .mobile-menu-button{
+    margin-top: 5px;
+  }
+  .title-bar-title:hover, .title-bar-title:active {
+    color: $light-grey;
+  }
+}
