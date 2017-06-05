@@ -132,6 +132,11 @@ div.title-bar {
 .hero {
   margin-bottom: 2rem; }
 
+/* page content */
+main#content.row {
+  margin-right: 4rem;
+  margin-left: 4rem; }
+
 /* main content area */
 section.main-content .posts-row .column {
   padding-top: 1rem; }

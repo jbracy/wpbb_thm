@@ -140,8 +140,8 @@ function jeb_beach_basic_features()  {
   add_filter( 'excerpt_more', 'jeb_beach_basic_excerpt_more' );
 
   function jeb_beach_basic_scripts() {
-    wp_enqueue_style( 'foundation',get_template_directory_uri() . '/assets/css/foundation.min.css');
-    wp_enqueue_style( 'foundation-icons',get_template_directory_uri() . '/assets/css/foundation-icons/foundation-icons.css');
+    wp_enqueue_style( 'foundation', get_template_directory_uri() . '/assets/css/foundation.min.css');
+    wp_enqueue_style( 'foundation-icons', get_template_directory_uri() . '/assets/css/foundation-icons/foundation-icons.css');
 		wp_enqueue_style( 'main', get_stylesheet_uri());
 
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/js/vendor/foundation.min.js', array('jquery'), null, true);
@@ -222,6 +222,7 @@ function jeb_beach_basic_features()  {
 	/*Add our customizer*/
 	require get_template_directory() . '/inc/customizer.php';
 
+	/*Apply theme mods */
 	function jeb_beach_basic_customize_css()
 	{
 	    ?>
