@@ -9,6 +9,8 @@ function jeb_beach_basic_features()  {
 	// Add theme support for Featured Images
 	add_theme_support( 'post-thumbnails' );
 
+	add_theme_support('title-tag');
+
 	// Add theme support for Custom Background
 	$background_args = array(
 		'default-color'          => 'ffffff',
@@ -137,19 +139,18 @@ function jeb_beach_basic_features()  {
   }
   add_filter( 'excerpt_more', 'jeb_beach_basic_excerpt_more' );
 
-  function jeb_beach_basic_styles_scripts() {
+  function jeb_beach_basic_scripts() {
     wp_enqueue_style( 'foundation',get_template_directory_uri() . '/assets/css/foundation.min.css');
     wp_enqueue_style( 'foundation-icons',get_template_directory_uri() . '/assets/css/foundation-icons/foundation-icons.css');
 		wp_enqueue_style( 'main', get_stylesheet_uri());
 
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/js/vendor/foundation.min.js', array('jquery'), null, true);
-    //wp_enqueue_script( 'zcom', 'https://intercom.zurb.com/scripts/zcom.js', '', null, true);
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), null, true);
 
   	wp_enqueue_script( 'comment-reply' );
 	}
 
-  add_action( 'wp_enqueue_scripts', 'jeb_beach_basic_styles_scripts' );
+  add_action( 'wp_enqueue_scripts', 'jeb_beach_basic_scripts' );
 
   function jeb_beach_basic_format_comments($comment, $args, $depth) {
     ?>
@@ -218,180 +219,8 @@ function jeb_beach_basic_features()  {
   }
   add_action('wp_footer', 'comment_validation_init');
 
-	function jeb_beach_basic_customize_register($wp_customize) {
-
-		#add nav color option to color settings
-		$wp_customize->add_setting(
-			'nav_color',
-			array('capability' => 'edit_theme_options',
-			'type'       => 'theme_mod',
-			'default'       => '#ffffff',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'nav_color', array(
-					'label' => 'Main navigation background color.',
-					'section' => 'colors',
-					'settings' => 'nav_color'
-				)
-			)
-		);
-
-		#add nav hover color option to color settings
-		$wp_customize->add_setting(
-			'nav_hover_color',
-			array('capability' => 'edit_theme_options',
-			'type'       => 'theme_mod',
-			'default'       => '#ffffff',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'nav_hover_color', array(
-					'label' => 'Main navigation background color on hover.',
-					'section' => 'colors',
-					'settings' => 'nav_hover_color'
-				)
-			)
-		);
-
-		#add nav text color option to color settings
-		$wp_customize->add_setting(
-			'nav_text_color',
-			array('capability' => 'edit_theme_options',
-			'type'       => 'theme_mod',
-			'default'       => '#000000',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'nav_text_color', array(
-					'label' => 'Main navigation text color.',
-					'section' => 'colors',
-					'settings' => 'nav_text_color'
-				)
-			)
-		);
-
-		#add nav text hover color option to color settings
-		$wp_customize->add_setting(
-			'nav_text_hover_color',
-			array('capability' => 'edit_theme_options',
-			'type'       => 'theme_mod',
-			'default'       => '#000000',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'nav_text_hover_color', array(
-					'label' => 'Main navigation text color on hover.',
-					'section' => 'colors',
-					'settings' => 'nav_text_hover_color'
-				)
-			)
-		);
-
-		#add main-content color option to color settings
-		$wp_customize->add_setting(
-			'content_color',
-			array('capability' => 'edit_theme_options',
-			'type'       => 'theme_mod',
-			'default'       => '#ffffff',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'content_color', array(
-  				'label' => 'Main Content background color',
-  				'section' => 'colors',
-					'settings' => 'content_color'
-				)
-			)
-		);
-
-		#add footer color option to color settings
-		$wp_customize->add_setting(
-			'footer_color',
-			array('capability' => 'edit_theme_options',
-			'type'       => 'theme_mod',
-			'default'       => '#cacaca',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'footer_color', array(
-  				'label' => 'Top footer background color',
-  				'section' => 'colors',
-					'settings' => 'footer_color'
-				)
-			)
-		);
-
-		#add sub_footer color option to color settings
-		$wp_customize->add_setting(
-			'sub_footer_color',
-			array('capability' => 'edit_theme_options',
-			'type'       => 'theme_mod',
-			'default'       => '#cacaca',
-			)
-		);
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'sub_footer_color', array(
-  				'label' => 'Bottom footer background color',
-  				'section' => 'colors',
-					'settings' => 'sub_footer_color'
-				)
-			)
-		);
-
-		#theme_options section
-		$wp_customize->add_section(
-			'jeb_beach_basic_theme_options', #section id to use in option table
-			array( #arguments array
-				'title' => 'Theme Options',
-				'capability' => 'edit_theme_options',
-				'description' => 'Allows you to edit your theme\'s layout'
-			)
-		);
-
-		# Add checkbox section to enable Custom Text
-		$wp_customize->add_setting('subtitle_text', array(
-		    'capability' => 'edit_theme_options',
-		    'type'       => 'theme_mod',
-		    'default'       => '1', # Default checked
-				'transport'	=> 'refresh',
-		));
-
-		$wp_customize->add_control('subtitle_text', array(
-		    'settings' => 'subtitle_text',
-		    'label'    => 'Display custom subtitle text',
-		    'section'  => 'jeb_beach_basic_theme_options', # Layout Section
-		    'type'     => 'checkbox', # Type of control: checkbox
-		));
-
-		# Add text input form to change custom text
-		$wp_customize->add_setting('subtitle_text[custom_text]', array(
-		    'capability' => 'edit_theme_options',
-		    'type'       => 'theme_mod',
-		    'default'       => 'Custom text', # Default custom text
-		));
-
-		$wp_customize->add_control('subtitle_text[custom_text]', array(
-		        'label' => 'Custom text', # Label of text form
-		        'section' => 'jeb_beach_basic_theme_options', # Layout Section
-		        'type' => 'text', # Type of control: text input
-		));
-	}
-	add_action('customize_register', 'jeb_beach_basic_customize_register');
+	/*Add our customizer*/
+	require get_template_directory() . '/inc/customizer.php';
 
 	function jeb_beach_basic_customize_css()
 	{
@@ -408,10 +237,6 @@ function jeb_beach_basic_features()  {
 	    <?php
 	}
 	add_action( 'wp_head', 'jeb_beach_basic_customize_css');
-	/*function jeb_beach_basic_content_width() {
-		$GLOBALS['content_width'] = apply_filters( 'jeb_beach_basic_content_width', 840 );
-	}
-	add_action( 'after_setup_theme', 'jeb_beach_basic_content_width', 0 );*/
 }
 add_action( 'after_setup_theme', 'jeb_beach_basic_features' );
 if ( ! isset( $content_width ) ) {
