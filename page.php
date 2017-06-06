@@ -26,7 +26,6 @@ get_header(); ?>
     <?php endif; ?>
     <!-- end main content -->
     <!-- sidebar -->
-    <hr class="small-12 hide-for-large" >
     <aside class="small-12 large-3 columns sidebar">
         <?php get_sidebar();?>
     </aside>

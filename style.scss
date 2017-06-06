@@ -174,13 +174,17 @@ main{
 }
 
 /* main content area */
-section.main-content .posts-row .column {
-  padding-top: 1rem;
+section.main-content {
+  padding-right: 4rem;
+  .posts-row .column {
+    padding: 0rem 2rem 4rem 2rem;
 
-  .excerpt {
-    min-height: 9.4rem;
+    .excerpt {
+      min-height: 9.4rem;
+    }
   }
 }
+
 
 div.main-row {
   .small-12 {
@@ -243,7 +247,14 @@ div.callout {
 }
 
 .sidebar {
-  border-left: 1px solid #cacaca;
+  @media only screen and (min-width: 1024px) {
+    padding-left: 1rem;
+    border-left: 1px solid #cacaca;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding-top: 1rem;
+    border-top: 1px solid #cacaca;
+  }
 }
 .accordion-title::before{
   content: none;

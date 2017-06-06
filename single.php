@@ -37,7 +37,6 @@
   <?php endwhile; endif; ?>
     <!-- sidebar -->
     <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
-      <hr class="small-12 hide-for-large" >
       <aside class="small-12 large-3 columns sidebar">
       		<?php dynamic_sidebar( 'sidebar-1' ); ?>
       </aside>

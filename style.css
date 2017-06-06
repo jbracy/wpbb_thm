@@ -138,10 +138,12 @@ main#content.row {
   margin-left: 4rem; }
 
 /* main content area */
-section.main-content .posts-row .column {
-  padding-top: 1rem; }
-  section.main-content .posts-row .column .excerpt {
-    min-height: 9.4rem; }
+section.main-content {
+  padding-right: 4rem; }
+  section.main-content .posts-row .column {
+    padding: 0rem 2rem 4rem 2rem; }
+    section.main-content .posts-row .column .excerpt {
+      min-height: 9.4rem; }
 
 div.main-row .small-12 {
   margin-bottom: 3rem; }
@@ -186,8 +188,14 @@ div.callout {
   .comment-respond a#cancel-comment-reply-link:hover {
     color: #913425; }
 
-.sidebar {
-  border-left: 1px solid #cacaca; }
+@media only screen and (min-width: 1024px) {
+  .sidebar {
+    padding-left: 1rem;
+    border-left: 1px solid #cacaca; } }
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    padding-top: 1rem;
+    border-top: 1px solid #cacaca; } }
 
 .accordion-title::before {
   content: none; }
