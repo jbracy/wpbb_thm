@@ -170,12 +170,11 @@ div.callout {
 .post {
   margin: 1rem; }
 
-#comments .comment {
-  margin: 1rem; }
-
 #comments .comment-list .children {
   border-left: 1px solid #c0c0c0;
   margin-left: 3rem; }
+#comments .comment-list .comment-meta h6 small {
+  color: #929292; }
 
 .comment-level-2 {
   border-left: 1px solid #979797; }

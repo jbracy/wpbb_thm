@@ -1,4 +1,4 @@
-  <div class="callout secondary">
+
     <div class="text-center">
       <h4>Leave a Comment</h4>
     </div>
@@ -36,4 +36,3 @@
       );
       comment_form($myargs);
       ?>
-</div>

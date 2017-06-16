@@ -221,13 +221,18 @@ div.callout {
   margin: 1rem;
 }
 
-#comments .comment {
-  margin: 1rem;
-}
+#comments .comment-list {
 
-#comments .comment-list .children {
-  border-left: 1px solid #c0c0c0;
-  margin-left: 3rem;
+  .children {
+    border-left: 1px solid #c0c0c0;
+    margin-left: 3rem;
+  }
+
+  .comment-meta {
+    h6 small {
+      color: #929292;
+    }
+  }
 }
 
 .comment-level-2{

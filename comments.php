@@ -25,18 +25,17 @@ if ( post_password_required() ) {
 		<?php if ( have_comments() ) :
 	    $comments_number = get_comments_number(); ?>
 			<header>
-				<div class="small-12 columns text-center comments-page-title">
-					<h1>Comments</h1>
-					<h3>on <?php the_title();?></h3>
+				<div class="text-center comments-page-title">
+					<h3>Comments on <a href=<?php the_permalink();?>><?php the_title();?></a></h3>
 				</div>
 			</header>
 
-			<section class="small-12 columns post-content">
+			<section class="post-content">
 				<ul class="comment-list">
 					<?php
 						wp_list_comments( array(
 		          	'style'             => 'ul',
-		          	'callback'          => 'bracy_blog_format_comments',
+		          	'callback'          => 'jeb_beach_basic_format_comments',
 								'max_depth'					=> '2'
 						) );
 		      ?>

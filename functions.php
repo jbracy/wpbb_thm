@@ -165,7 +165,7 @@ function jeb_beach_basic_features()  {
           <?php comment_text(); ?>
         </div>
 				<div class="comment-reply">
-						<?php echo preg_replace( '/comment-reply-link/', 'comment-reply-link button round', get_comment_reply_link(array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) )), 1 ); ?>
+						<?php echo preg_replace( '/comment-reply-link/', 'comment-reply-link button round expanded', get_comment_reply_link(array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) )), 1 ); ?>
 			</div>
     </div>
     <?php
