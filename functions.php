@@ -24,7 +24,7 @@ function jeb_beach_basic_features()  {
 
 	// Add theme support for Custom Header
 	$header_args = array(
-		'default-image'          => 'http://placehold.it/1440x400',
+		'default-image'          => get_template_directory_uri() . '/assets/img/clem-onojeghuo-unsplash-beach.jpg',
 		'width'                  => 1440,
 		'height'                 => 400,
 		'flex-width'             => true,
