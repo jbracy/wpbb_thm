@@ -186,6 +186,11 @@ div.callout {
   margin-bottom: 1rem; }
   .comment-respond a#cancel-comment-reply-link:hover {
     color: #913425; }
+.comment-respond form input.label.alert {
+  background-color: transparent;
+  border: 1px dotted #cc4b37; }
+.comment-respond form textarea.label.alert {
+  border: 1px dotted #cc4b37; }
 
 @media only screen and (min-width: 1024px) {
   .sidebar {

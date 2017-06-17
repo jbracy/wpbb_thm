@@ -200,7 +200,7 @@ function jeb_beach_basic_features()  {
   },
 
   messages: {
-    author: "Please enter in your name.",
+    author: "Please enter your name.",
     email: "Please enter a valid email address.",
     comment: "Message box can't be empty!"
   },

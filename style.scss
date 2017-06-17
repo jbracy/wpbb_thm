@@ -23,6 +23,7 @@ $sand: #C2B5B1;
 $sand-dark: #9B908D;
 $off-white: #e6e6e6;
 $white: #fff;
+$alert: #cc4b37;
 
 /* Override some foundation defaults */
 * {
@@ -241,12 +242,25 @@ div.callout {
 
 .comment-respond {
   a#cancel-comment-reply-link {
-    color: #cc4b37;
+    color: $alert;
     float: right;
     font-size: 1rem;
     margin-bottom: 1rem;
     &:hover {
       color: #913425;
+    }
+  }
+  form {
+    input{
+      &.label.alert{
+        background-color: transparent;
+        border: 1px dotted $alert;
+      }
+    }
+    textarea {
+      &.label.alert{
+        border: 1px dotted $alert;
+      }
     }
   }
 }
