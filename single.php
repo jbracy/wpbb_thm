@@ -5,7 +5,7 @@
       <?php if (!isset($_GET['display'])) { ?>
         <!-- page title-->
         <header>
-          <div class="small-12 large-9 columns text-center">
+          <div class="small-12 large-8 columns text-center">
             <h1><?php the_title();?></h1>
           </div>
         </header>
