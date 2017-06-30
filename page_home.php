@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full Width
+ * Template Name: Home Page
  *
  * @package Bracy
  * @subpackage Blog Theme
