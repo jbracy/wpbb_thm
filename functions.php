@@ -146,7 +146,7 @@ function jeb_beach_basic_features()  {
 
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/js/vendor/foundation.min.js', array('jquery'), null, true);
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), null, true);
-		if (is_home() || is_single() || is_page_template( 'media' )):
+		if (is_home() || is_single() || is_page_template( 'page_media.php' )):
 			wp_enqueue_script( 'responsive-embed', get_template_directory_uri() . '/assets/js/responsive-embed.js', array('jquery'), null, true);
 		endif;
 		if (is_single()):
