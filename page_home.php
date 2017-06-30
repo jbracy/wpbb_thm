@@ -29,15 +29,21 @@ get_header(); ?>
   </section>
   <!-- sidebar -->
   <aside>
-    <div class="small-12 large-3 columns sidebar">
-      <?php get_sidebar('home-1');?>
-    </div>
-    <div class="small-12 large-3 columns sidebar">
-      <?php get_sidebar('home-2');?>
-    </div>
-    <div class="small-12 large-3 columns sidebar">
-      <?php get_sidebar('home-3');?>
-    </div>
+    <?php if ( is_active_sidebar( 'home-1' )  ) : ?>
+      <div class="small-12 large-3 columns">
+        <?php dynamic_sidebar('home-1');?>
+      </div>
+    <?php endif; ?>
+    <?php if ( is_active_sidebar( 'home-2' )  ) : ?>
+      <div class="small-12 large-3 columns">
+        <?php dynamic_sidebar('home-2');?>
+      </div>
+    <?php endif; ?>
+    <?php if ( is_active_sidebar( 'home-3' )  ) : ?>
+      <div class="small-12 large-3 columns">
+        <?php dynamic_sidebar('home-3');?>
+      </div>
+    <?php endif; ?>
   </aside>
   <!-- end sidebar -->
 <?
