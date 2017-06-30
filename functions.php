@@ -149,6 +149,9 @@ function jeb_beach_basic_features()  {
 		if (is_home() || is_single()):
 			wp_enqueue_script( 'responsive-embed', get_template_directory_uri() . '/assets/js/responsive-embed.js', array('jquery'), null, true);
 		endif;
+		if (is_single()):
+			wp_enqueue_script( 'comments', get_template_directory_uri() . '/assets/js/comments.js', array('jquery'), null, true);
+		endif;
   	wp_enqueue_script( 'comment-reply' );
 	}
 
@@ -156,7 +159,7 @@ function jeb_beach_basic_features()  {
 
   function jeb_beach_basic_format_comments($comment, $args, $depth) {
     ?>
-    <div <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php echo comment_ID(); ?>">
+    <li <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php echo comment_ID(); ?>">
         <div class="comment-meta">
           <h6>
             <strong><?php comment_author(); ?>:</strong>
@@ -167,9 +170,9 @@ function jeb_beach_basic_features()  {
           <?php comment_text(); ?>
         </div>
 				<div class="comment-reply">
-						<?php echo preg_replace( '/comment-reply-link/', 'comment-reply-link button round expanded', get_comment_reply_link(array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) )), 1 ); ?>
-			</div>
-    </div>
+					<?php echo preg_replace( '/comment-reply-link/', 'comment-reply-link button round expanded', get_comment_reply_link(array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) )), 1 ); ?>
+				</div>
+    </li>
     <?php
   }
   function comment_validation_init() {

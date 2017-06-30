@@ -247,9 +247,13 @@ div.callout {
 #comments .comment-list {
 
   .children {
-    border-left: 1px solid #c0c0c0;
-    margin-left: 3rem;
-    margin-bottom: 3rem;
+    li {
+      background-color: #f4f4f4;
+      border-left: 1px solid #c0c0c0;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
   }
 
   .comment-meta {

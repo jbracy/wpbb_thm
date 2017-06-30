@@ -188,10 +188,12 @@ div.main-row {
 div.callout {
   border-radius: 10px; }
 
-#comments .comment-list .children {
+#comments .comment-list .children li {
+  background-color: #f4f4f4;
   border-left: 1px solid #c0c0c0;
-  margin-left: 3rem;
-  margin-bottom: 3rem; }
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem; }
 #comments .comment-list .comment-meta h6 small {
   color: #929292; }
 
