@@ -42,9 +42,7 @@
 </footer>
 <!-- end footer -->
 <div class="title-bar text-center show-for-small-only" onclick="">
-    <button class="menu-icon mobile-menu-button" type="button" data-toggle="offCanvasBottom"></button>
     <div class="title-bar-title" data-toggle="offCanvasBottom">Menu</div>
-    <button class="menu-icon mobile-menu-button" type="button" data-toggle="offCanvasBottom"></button>
 </div>
 </div>
 </div>

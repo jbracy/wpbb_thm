@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 
 <div id="comments" class="row">
 
-		<?php if ( have_comments() ) :
+		<?php if ( have_comments() && comments_open() ) :
 	    $comments_number = get_comments_number(); ?>
 			<header>
 				<div class="text-center comments-page-title">
@@ -50,5 +50,6 @@ if ( post_password_required() ) {
 		?>
 			<p class="no-comments"><?php 'Comments are closed.'; ?></p>
 		<?php endif; ?>
+
 
 </div><!-- .comments-area -->

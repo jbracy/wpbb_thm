@@ -44,13 +44,19 @@ img.rounded-image {
   border: 1px solid #979797;
   border-radius: 100px; }
 
+figcaption.wp-caption-text {
+  background: #C2B5B1;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem; }
+
 blockquote {
   font-size: 2rem;
   margin: 0 3rem; }
 
 input[type="submit"] {
   border-radius: 5px;
-  background-color: #61A9D6;
+  background-color: #3c77a8;
   border-top-style: none;
   border-left-style: none;
   border-bottom-style: none;
@@ -98,10 +104,16 @@ img.aligncenter {
   margin-left: auto;
   margin-right: auto; }
 
+img.wp-post-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem; }
+
 /* main header elements */
 .header {
   text-align: center;
-  background: #61A9D6; }
+  background: #3c77a8; }
   .header h1 {
     margin-bottom: 0px; }
   .header .headline {
@@ -133,17 +145,24 @@ div.title-bar {
   margin-bottom: 2rem; }
 
 /* page content */
-main#content.row {
-  margin-right: 4rem;
-  margin-left: 4rem; }
+@media only screen and (min-width: 640px) {
+  main#content.row {
+    margin-right: 4rem;
+    margin-left: 4rem; } }
+main#content p.subheader.post-date {
+  text-align: center;
+  line-height: .5;
+  margin-bottom: 1rem; }
 
 /* main content area */
-section.main-content {
-  padding-right: 4rem; }
-  section.main-content .posts-row .column {
-    padding: 0rem 2rem 4rem 2rem; }
-    section.main-content .posts-row .column .excerpt {
-      min-height: 9.4rem; }
+@media only screen and (min-width: 640px) {
+  section.main-content {
+    padding-right: 4rem; } }
+section.main-content .posts-row .column {
+  padding: 0rem 2rem 4rem 2rem;
+  word-wrap: break-word; }
+  section.main-content .posts-row .column .excerpt {
+    min-height: 9.4rem; }
 
 div.main-row .small-12 {
   margin-bottom: 3rem; }
@@ -155,24 +174,24 @@ div.main-row {
 
 .button.round {
   border-radius: 5px;
-  background-color: #61A9D6;
+  background-color: #3c77a8;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5); }
   .button.round:hover {
     background-color: #3085ba;
     box-shadow: none; }
 
+.pagination .current {
+  background-color: #3c77a8; }
 .pagination li {
   border: 1px solid #cacaca; }
 
 div.callout {
   border-radius: 10px; }
 
-.post {
-  margin: 1rem; }
-
 #comments .comment-list .children {
   border-left: 1px solid #c0c0c0;
-  margin-left: 3rem; }
+  margin-left: 3rem;
+  margin-bottom: 3rem; }
 #comments .comment-list .comment-meta h6 small {
   color: #929292; }
 
@@ -214,6 +233,8 @@ footer {
   background-color: #C2B5B1;
   margin: 20px 0 0 0;
   padding-top: 1rem; }
+  footer .widget-title {
+    border: none; }
 
 footer .sub-footer {
   background-color: #9B908D;
@@ -223,7 +244,7 @@ footer .sub-footer {
       margin: 0 0 2rem 0; } }
 
 #offCanvasBottom {
-  background-color: #61A9D6; }
+  background-color: #3c77a8; }
   #offCanvasBottom .menu {
     margin: 1rem; }
     #offCanvasBottom .menu a {
@@ -235,10 +256,16 @@ footer .sub-footer {
     #offCanvasBottom .menu a:hover, #offCanvasBottom .menu a:active {
       background-color: #3085ba; }
     #offCanvasBottom .menu li ul {
-      background-color: #61A9D6; }
+      background-color: #3c77a8; }
+    #offCanvasBottom .menu button.close-button {
+      color: #fff; }
+      #offCanvasBottom .menu button.close-button:hover {
+        color: #cc4b37; }
+  #offCanvasBottom .is-drilldown ul#menu-main-menu li.menu-item:not(:last-child) {
+    border-bottom: 1px solid #cacaca; }
 
 div.title-bar {
-  background-color: #61A9D6;
+  background-color: #3c77a8;
   box-shadow: 0 0 10px rgba(10, 10, 10, 0.7); }
   div.title-bar .mobile-menu-button {
     margin-top: 5px; }

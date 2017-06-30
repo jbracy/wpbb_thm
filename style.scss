@@ -15,7 +15,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 /* Define our colors */
-$base-blue: #61A9D6;
+$base-blue: #3c77a8;
 $dark-blue: #3085ba;
 $light-blue: #9ecae6;
 $light-grey: #e6e6e6;
@@ -23,6 +23,7 @@ $sand: #C2B5B1;
 $sand-dark: #9B908D;
 $off-white: #e6e6e6;
 $white: #fff;
+$black: #000;
 $alert: #cc4b37;
 
 /* Override some foundation defaults */
@@ -61,6 +62,12 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 img.rounded-image {
   border: 1px solid #979797;
   border-radius: 100px;
+}
+figcaption.wp-caption-text {
+  background: $sand;
+  color: $white;
+  text-align: center;
+  padding: 0.5rem;
 }
 blockquote {
   font-size: 2rem;
@@ -102,7 +109,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .alignright { float: right; }
 .alignleft { float: left; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
-
+img.wp-post-image { display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem;}
 
 /* main header elements */
 .header {
@@ -167,18 +174,29 @@ div.title-bar {
 /* page content */
 main{
   &#content {
+  @media only screen and (min-width: 640px){
     &.row {
       margin-right: 4rem;
       margin-left: 4rem;
+    }
+    }
+    p.subheader.post-date {
+      text-align: center;
+      line-height: .5;
+      margin-bottom: 1rem;
     }
   }
 }
 
 /* main content area */
 section.main-content {
-  padding-right: 4rem;
+  @media only screen and (min-width: 640px){
+    padding-right: 4rem;
+  }
+
   .posts-row .column {
     padding: 0rem 2rem 4rem 2rem;
+    word-wrap: break-word;
 
     .excerpt {
       min-height: 9.4rem;
@@ -210,16 +228,20 @@ div.main-row {
   }
 }
 
-.pagination li {
+.pagination {
+  .current {
+    background-color: $base-blue;
+  }
+  .next, .previous {
+
+  }
+  li {
   border: 1px solid #cacaca;
+  }
 }
 
 div.callout {
   border-radius: 10px;
-}
-
-.post {
-  margin: 1rem;
 }
 
 #comments .comment-list {
@@ -227,6 +249,7 @@ div.callout {
   .children {
     border-left: 1px solid #c0c0c0;
     margin-left: 3rem;
+    margin-bottom: 3rem;
   }
 
   .comment-meta {
@@ -291,6 +314,10 @@ footer {
   background-color: $sand;
   margin: 20px 0 0 0;
   padding-top: 1rem;
+
+  .widget-title {
+    border:none;
+  }
 }
 
 footer .sub-footer {
@@ -322,6 +349,16 @@ footer .sub-footer {
         li ul {
           background-color: $base-blue;
         }
+
+        button.close-button{
+          color: $white;
+          &:hover {
+            color: $alert;
+          }
+        }
+  }
+  .is-drilldown ul#menu-main-menu li.menu-item:not(:last-child) {
+    border-bottom: 1px solid #cacaca;
   }
 }
 

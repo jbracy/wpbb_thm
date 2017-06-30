@@ -8,6 +8,12 @@
         ?>
         <div class="column">
           <h3 class="text-center"><a href="<?php the_permalink(); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+          <p class="subheader post-date"><?php the_date(); ?></p>
+          <?php
+          if ( has_post_thumbnail() ) {
+          	the_post_thumbnail('thumbnail');
+          }
+          ?>
           <div class="excerpt">
             <?php the_excerpt(); ?>
           </div>

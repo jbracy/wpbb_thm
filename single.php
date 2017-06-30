@@ -3,21 +3,35 @@
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
       <?php if (!isset($_GET['display'])) { ?>
-        <!-- page title-->
-        <header>
-          <div class="small-12 large-8 columns text-center">
-            <h1><?php the_title();?></h1>
-          </div>
-        </header>
-        <!-- end page title-->
-
         <!-- main content -->
         <article class="small-12 large-8 columns post-content">
+          <!-- page title-->
+          <header class="text-center">
+              <h1><?php the_title();?></h1>
+              <p class="subheader post-date"><?php the_date(); ?></p>
+              <?php
+              if ( has_post_thumbnail() ) {
+              	the_post_thumbnail();
+              }
+              ?>
+          </header>
+          <!-- end page title-->
+
           <div class="post">
             <?php the_content(); ?>
           </div>
           <hr>
-          <a href="?display=comments<?php the_ID ?>" class="button expanded round">Comments <span class="badge secondary"><?php comments_number('0','1','%'); ?></span></a>
+          <?php if ( !comments_open() ) {
+            ?>
+            <a href="#" class="button disabled expanded round" aria-disabled>Comments are disabled. <span class="badge secondary"><?php comments_number('0','1','%'); ?></span></a>
+          <?php
+          }
+          else {
+            ?>
+            <a href="?display=comments<?php the_ID ?>" class="button expanded round">Comments <span class="badge secondary"><?php comments_number('0','1','%'); ?></span></a>
+          <?php }
+          ?>
+
         </article>
       <?php }
 

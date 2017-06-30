@@ -9,14 +9,14 @@
 get_header(); ?>
   <section>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <!-- page title-->
-    <header class="small-12 large-9 columns text-center">
-      <h1><?php the_title();?></h1>
-    </header>
-  <!-- end page title-->
-
     <!-- main content -->
-    <section class="small-12 large-9 columns">
+    <section class="small-12 columns">
+      <!-- page title-->
+        <header class="text-center">
+          <h1><?php the_title();?></h1>
+        </header>
+      <!-- end page title-->
+      
       <div class="row">
           <div class="post post-content">
             <?php the_content(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
     <?php endif; ?>
     <!-- end main content -->
     <!-- sidebar -->
-    <aside class="small-12 large-3 columns sidebar">
+    <aside class="small-12 columns sidebar">
         <?php get_sidebar();?>
     </aside>
     <!-- end sidebar -->

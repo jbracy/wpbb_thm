@@ -2,14 +2,15 @@
 get_header(); ?>
   <section>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <!-- page title-->
-    <header class="small-12 large-8 columns text-center">
-      <h1><?php the_title();?></h1>
-    </header>
-  <!-- end page title-->
 
     <!-- main content -->
     <section class="small-12 large-8 columns">
+      <!-- page title-->
+        <header class="text-center">
+          <h1><?php the_title();?></h1>
+        </header>
+      <!-- end page title-->
+
       <div class="row">
           <div class="post post-content">
             <?php
