@@ -22,13 +22,8 @@ if ( post_password_required() ) {
 
 <div id="comments" class="row">
 
-		<?php if ( have_comments() && comments_open() ) :
+		<?php if ( comments_open() ) :
 	    $comments_number = get_comments_number(); ?>
-			<header>
-				<div class="text-center comments-page-title">
-					<h3>Comments on <a href=<?php the_permalink();?>><?php the_title();?></a></h3>
-				</div>
-			</header>
 
 			<section class="post-content">
 				<ul class="comment-list">

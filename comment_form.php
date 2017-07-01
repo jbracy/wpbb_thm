@@ -1,6 +1,6 @@
 
     <div class="text-center">
-      <h4>Leave a Comment</h4>
+      <h4><?php if (get_comments_number() > 0): echo 'Leave a Comment'; else : echo 'Be the first to leave a comment!'; endif?></h4>
     </div>
       <?php
       $fields = array(

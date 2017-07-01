@@ -2,7 +2,6 @@
   <section>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-      <?php if (!isset($_GET['display'])) { ?>
         <!-- main content -->
         <article class="small-12 large-8 columns post-content">
           <!-- page title-->
@@ -23,31 +22,27 @@
           <hr>
           <?php if ( !comments_open() ) {
             ?>
-            <a href="#" class="button disabled expanded round" aria-disabled>Comments are disabled. <span class="badge secondary"><?php comments_number('0','1','%'); ?></span></a>
+            <p class="button disabled expanded round" aria-disabled>Comments are disabled. <span class="badge secondary"><?php comments_number('0','1','%'); ?></span></p>
           <?php
           }
           else {
             ?>
-            <a href="?display=comments<?php the_ID ?>" class="button expanded round">Comments <span class="badge secondary"><?php comments_number('0','1','%'); ?></span></a>
+            <p id="comments-button" class="button expanded round">Comments <span class="badge secondary"><?php comments_number('0','1','%'); ?></span></p>
           <?php }
           ?>
-
+          <div id="comments" class="comments" style="display: none;">
+            <?php
+        		// If comments are open or we have at least one comment, load up the comment template.
+        		if ( comments_open() || get_comments_number() ) {
+        			comments_template();
+        		}
+            ?>
+            <div id="respond" class="comment-respond">
+             <?php get_template_part('comment_form'); ?>
+        		</div>
+          </div>
         </article>
-      <?php }
 
-      if (isset($_GET['display']) && $_GET['display'] == "comments") { ?>
-        <div class="small-12 large-8 columns comments">
-          <?php
-      		// If comments are open or we have at least one comment, load up the comment template.
-      		if ( comments_open() || get_comments_number() ) {
-      			comments_template();
-      		}
-          ?>
-          <div id="respond" class="comment-respond">
-           <?php get_template_part('comment_form'); ?>
-      		</div>
-        </div>
-    <?php } ?>
   <?php endwhile; endif; ?>
     <!-- sidebar -->
     <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>

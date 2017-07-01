@@ -68,6 +68,7 @@ figcaption.wp-caption-text {
   color: $white;
   text-align: center;
   padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 blockquote {
   font-size: 2rem;
@@ -97,15 +98,11 @@ input[type="submit"]
     box-shadow: none;
   }
 }
-span.badge {
-  padding-bottom: .5em;
-  padding-left: .5em;
-}
 
 /*add some wp defaults*/
-img.alignright { float: right; margin: 0 0 1em 1em; }
-img.alignleft { float: left; margin: 0 1em 1em 0; }
-img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; margin: 0 0 1em 1em; }
+.alignleft { float: left; margin: 0 1em 1em 0; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .alignright { float: right; }
 .alignleft { float: left; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
@@ -164,6 +161,10 @@ div.title-bar {
 
   &:hover {
     cursor: pointer;
+  }
+
+  .title-bar-title  {
+    font-size: 2rem;
   }
 }
 
@@ -244,6 +245,22 @@ div.callout {
   border-radius: 10px;
 }
 
+.accordion-title {
+  text-align: center;
+  font-size: 1rem;
+  padding: .5rem;
+
+  .badge.secondary {
+    padding-bottom: .3rem;
+    position: relative;
+    top: -.3rem;
+  }
+
+  &::before {
+    content: "+";
+  }
+}
+
 #comments .comment-list {
 
   .children {
@@ -293,17 +310,14 @@ div.callout {
 }
 
 .sidebar {
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 64rem) {
     padding-left: 1rem;
     border-left: 1px solid #cacaca;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 64rem) {
     padding-top: 1rem;
     border-top: 1px solid #cacaca;
   }
-}
-.accordion-title::before{
-  content: none;
 }
 
 .widget-title {
@@ -311,6 +325,10 @@ div.callout {
 }
 
 section.widget ul {
+  text-align: center;
+}
+
+section.widget.facebook_widget_likebox {
   text-align: center;
 }
 
@@ -332,14 +350,19 @@ footer .sub-footer {
   }
 }
 
-
+.position-bottom {
+  height: 300px;
+  transform: translateY(300px)
+}
 
 #offCanvasBottom {
   background-color: $base-blue;
+
   .menu {
         margin: 1rem;
         a {
           color: $white;
+          font-size: 1.5rem;
         }
         a::after{
           border-color: transparent transparent transparent $white;
