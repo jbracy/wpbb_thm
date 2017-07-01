@@ -227,7 +227,7 @@ div.callout {
   .sidebar {
     padding-left: 1rem;
     border-left: 1px solid #cacaca; } }
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 63rem) {
   .sidebar {
     padding-top: 1rem;
     border-top: 1px solid #cacaca; } }
@@ -253,7 +253,7 @@ footer .sub-footer {
   padding-top: 1rem; }
   @media only screen and (max-width: 580px) {
     footer .sub-footer {
-      margin: 0 0 2rem 0; } }
+      margin: 0 0 4rem 0; } }
 
 .position-bottom {
   height: 300px;
