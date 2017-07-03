@@ -23,17 +23,17 @@ get_header(); ?>
   <!-- sidebar -->
   <aside>
     <?php if ( is_active_sidebar( 'home-1' )  ) : ?>
-      <div class="small-12 large-3 columns">
+      <div class="small-12 medium-3 columns">
         <?php dynamic_sidebar('home-1');?>
       </div>
     <?php endif; ?>
     <?php if ( is_active_sidebar( 'home-2' )  ) : ?>
-      <div class="small-12 large-3 columns">
+      <div class="small-12 medium-3 columns">
         <?php dynamic_sidebar('home-2');?>
       </div>
     <?php endif; ?>
     <?php if ( is_active_sidebar( 'home-3' )  ) : ?>
-      <div class="small-12 large-3 columns">
+      <div class="small-12 medium-3 columns">
         <?php dynamic_sidebar('home-3');?>
       </div>
     <?php endif; ?>

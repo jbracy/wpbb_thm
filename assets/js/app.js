@@ -13,3 +13,18 @@ jQuery('.title-bar').click(function () {
 function closeMobileNav() {
   jQuery('#mobile-menu').width(0);
 }
+
+jQuery('#comments-button').click(function () {
+  jQuery('#comments').toggle(500);
+});
+
+jQuery('.children').each(function () {
+  jQuery(this).appendTo(jQuery(this).prev());
+});
+
+jQuery('iframe').each(function () {
+  jQuery(this).wrap('<div class="responsive-embed"></div>');
+});
+
+var imgWidth = jQuery('.gallery-icon img').css('width');
+jQuery('figure').css('width', imgWidth);
