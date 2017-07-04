@@ -2,7 +2,7 @@
 <!-- end main-content area -->
 
 <!-- footer -->
-<footer class="row-expanded">
+<footer class="row expanded">
   <section class="small-12 columns main-footer">
     <div class="row">
     <!-- footer widgets -->

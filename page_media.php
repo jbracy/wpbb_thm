@@ -28,9 +28,6 @@ get_header(); ?>
     	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; ?>
     <!-- end main content -->
-    <!-- sidebar -->
-    <?php get_sidebar();?>
-    <!-- end sidebar -->
   </div>
   </section>
 <?
