@@ -173,6 +173,18 @@ div.main-row {
   div.main-row ul {
     list-style: none; }
 
+/* home page sidebars */
+.home-widgets {
+  margin-top: 2rem; }
+  .home-widgets .home-widgets-title {
+    text-align: center; }
+  .home-widgets .widget-title {
+    text-align: center; }
+  .home-widgets section.widget ul {
+    text-align: center; }
+    .home-widgets section.widget ul li {
+      margin-top: 0.2rem; }
+
 .button.round {
   border-radius: 5px;
   background-color: #3c77a8;

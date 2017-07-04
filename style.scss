@@ -221,6 +221,27 @@ div.main-row {
   }
 }
 
+/* home page sidebars */
+.home-widgets {
+  margin-top: 2rem;
+
+  .home-widgets-title {
+    text-align: center;
+  }
+
+  .widget-title {
+    text-align: center;
+  }
+
+  section.widget ul {
+    text-align: center;
+
+    li {
+      margin-top: 0.2rem;
+    }
+  }
+}
+
 .button.round {
   border-radius: 5px;
   background-color: $base-blue;
