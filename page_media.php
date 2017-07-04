@@ -16,7 +16,7 @@ get_header(); ?>
           <h1><?php the_title();?></h1>
         </header>
       <!-- end page title-->
-      
+
       <div class="row">
           <div class="post post-content">
             <?php the_content(); ?>
@@ -28,9 +28,7 @@ get_header(); ?>
     <?php endif; ?>
     <!-- end main content -->
     <!-- sidebar -->
-    <aside class="small-12 columns sidebar">
-        <?php get_sidebar();?>
-    </aside>
+    <?php get_sidebar();?>
     <!-- end sidebar -->
   </section>
 <?

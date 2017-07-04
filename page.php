@@ -27,9 +27,7 @@ get_header(); ?>
     <?php endif; ?>
     <!-- end main content -->
     <!-- sidebar -->
-    <aside class="small-12 large-3 columns sidebar">
-        <?php get_sidebar();?>
-    </aside>
+    <?php get_sidebar(); ?>
     <!-- end sidebar -->
   </section>
 <?

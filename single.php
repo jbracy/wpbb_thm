@@ -45,11 +45,7 @@
 
   <?php endwhile; endif; ?>
     <!-- sidebar -->
-    <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
-      <aside class="small-12 large-3 columns sidebar">
-      		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-      </aside>
-    <?php endif;?>
+    <?php get_sidebar(); ?>
     <!-- end sidebar -->
     </div>
     <!-- end main content -->

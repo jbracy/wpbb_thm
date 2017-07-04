@@ -38,11 +38,7 @@
     </section>
     <!-- end main content -->
   <!-- sidebar -->
-  <aside class="small-12 large-3 end columns sidebar">
-      <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
-      		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-      <?php endif; ?>
-  </aside>
+  <?php get_sidebar(); ?>
   <!-- end sidebar -->
   </section>
 <?
