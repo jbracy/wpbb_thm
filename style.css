@@ -154,6 +154,10 @@ main#content p.subheader.post-date {
   text-align: center;
   line-height: .5;
   margin-bottom: 1rem; }
+main#content .post-content {
+  overflow: hidden; }
+main#content .media-object {
+  margin-bottom: 4rem; }
 
 /* main content area */
 @media only screen and (min-width: 640px) {
@@ -245,12 +249,14 @@ div.callout {
   .sidebar {
     padding-top: 1rem;
     border-top: 1px solid #cacaca; } }
-.sidebar section.widget:not(:first-child) {
-  border-top: 1px solid #cacaca; }
-.sidebar section.widget ul {
-  text-align: center; }
-.sidebar section.widget .widget-title {
-  text-align: center; }
+.sidebar section.widget {
+  padding-top: 1rem; }
+  .sidebar section.widget:not(:first-child) {
+    border-top: 1px solid #cacaca; }
+  .sidebar section.widget ul {
+    text-align: center; }
+  .sidebar section.widget .widget-title {
+    text-align: center; }
 
 section.widget.facebook_widget_likebox {
   text-align: center; }

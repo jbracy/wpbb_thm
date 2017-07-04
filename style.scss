@@ -188,6 +188,14 @@ main{
       line-height: .5;
       margin-bottom: 1rem;
     }
+
+    .post-content {
+      overflow: hidden;
+    }
+
+    .media-object {
+      margin-bottom: 4rem;
+    }
   }
 }
 
@@ -343,6 +351,8 @@ div.callout {
   }
 
   section.widget {
+    padding-top: 1rem;
+
     &:not(:first-child) {
       border-top: 1px solid #cacaca;
     }

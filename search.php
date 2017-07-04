@@ -9,12 +9,22 @@
           ?>
           <ul>
             <li>
-              <h4><a href="<?php the_permalink(); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-              <p class="subheader"><?php the_date(); ?></p>
-              <div class="search-excerpt">
-                <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>" class="expanded button round">Read More</a>
-              </div>
+                <div class="media-object">
+                  <? if ( has_post_thumbnail() ) {
+                    ?>
+                  <div class="media-object-section middle">
+                    <div class="">
+                      <? the_post_thumbnail('thumbnail'); ?>
+                    </div>
+                  </div>
+                  <? } ?>
+                  <div class="media-object-section main-section">
+                    <h4><a href="<?php the_permalink(); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+                    <p class="subheader"><?php the_date(); ?></p>
+                    <p><?php the_excerpt(); ?></p>
+                  </div>
+                  <a href="<?php the_permalink(); ?>" class="expanded button round">Read More</a>
+                </div>
             </li>
           </ul>
           <?php endwhile; else : ?>

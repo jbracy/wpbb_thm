@@ -59,8 +59,8 @@ function jeb_beach_basic_features()  {
   		'description'   => __( 'Add widgets here to appear in your sidebar.', 'jeb_beach_basic' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
-  		'before_title'  => '<h5 class="widget-title">',
-  		'after_title'   => '</h5>',
+  		'before_title'  => '<h4 class="widget-title">',
+  		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
   		'name'          => __( 'Home Sidebar Left', 'jeb_beach_basic' ),
@@ -68,8 +68,8 @@ function jeb_beach_basic_features()  {
   		'description'   => __( 'Add widgets here to appear on your homepage.', 'jeb_beach_basic' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
-  		'before_title'  => '<h5 class="widget-title">',
-  		'after_title'   => '</h5>',
+  		'before_title'  => '<h4 class="widget-title">',
+  		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
   		'name'          => __( 'Home Sidebar Middle', 'jeb_beach_basic' ),
@@ -77,8 +77,8 @@ function jeb_beach_basic_features()  {
   		'description'   => __( 'Add widgets here to appear on your homepage.', 'jeb_beach_basic' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
-  		'before_title'  => '<h5 class="widget-title">',
-  		'after_title'   => '</h5>',
+  		'before_title'  => '<h4 class="widget-title">',
+  		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
   		'name'          => __( 'Home Sidebar Right', 'jeb_beach_basic' ),
@@ -86,8 +86,8 @@ function jeb_beach_basic_features()  {
   		'description'   => __( 'Add widgets here to appear on your homepage.', 'jeb_beach_basic' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
-  		'before_title'  => '<h5 class="widget-title">',
-  		'after_title'   => '</h5>',
+  		'before_title'  => '<h4 class="widget-title">',
+  		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
   		'name'          => __( 'Footer Left', 'jeb_beach_basic' ),
@@ -95,8 +95,8 @@ function jeb_beach_basic_features()  {
   		'description'   => __( 'Add widgets here to appear in your footer.', 'jeb_beach_basic' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
-  		'before_title'  => '<h5 class="widget-title">',
-  		'after_title'   => '</h5>',
+  		'before_title'  => '<h4 class="widget-title">',
+  		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
   		'name'          => __( 'Footer Middle', 'jeb_beach_basic' ),
@@ -104,8 +104,8 @@ function jeb_beach_basic_features()  {
   		'description'   => __( 'Add widgets here to appear in your footer.', 'jeb_beach_basic' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
-  		'before_title'  => '<h5 class="widget-title">',
-  		'after_title'   => '</h5>',
+  		'before_title'  => '<h4 class="widget-title">',
+  		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
   		'name'          => __( 'Footer Right', 'jeb_beach_basic' ),
@@ -113,8 +113,8 @@ function jeb_beach_basic_features()  {
   		'description'   => __( 'Add widgets here to appear in your footer.', 'jeb_beach_basic' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
-  		'before_title'  => '<h5 class="widget-title">',
-  		'after_title'   => '</h5>',
+  		'before_title'  => '<h4 class="widget-title">',
+  		'after_title'   => '</h4>',
   	) );
   }
 
