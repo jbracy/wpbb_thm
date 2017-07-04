@@ -114,7 +114,8 @@ img.wp-post-image {
   .header h1 {
     margin-bottom: 0px; }
   .header .headline {
-    color: #fff; }
+    color: #fff;
+    font-family: "Bradley Hand", "Serif"; }
     .header .headline a {
       color: #fff; }
   .header nav div.menu-centered {
