@@ -2,8 +2,9 @@
 <!-- end main-content area -->
 
 <!-- footer -->
-<footer>
-  <section class="row expanded main-footer">
+<footer class="row-expanded">
+  <section class="small-12 columns main-footer">
+    <div class="row">
     <!-- footer widgets -->
     <div class="small-12 medium-4 columns footer-widget">
       <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
@@ -21,8 +22,10 @@
       <?php endif; ?>
     </div>
     <!-- end footer widgets -->
+  </div>
   </section>
-  <section class="row expanded sub-footer">
+  <section class="small-12 columns sub-footer">
+    <div class="row">
     <div class="small-12 columns text-center">
       <p>© <? bloginfo('name'); ?> <? echo date('Y'); ?></p>
     </div>
@@ -32,6 +35,7 @@
     <div class="small-12 columns text-center">
       <p>Theme by Jordan</p>
     </div>
+  </div>
   </section>
 </footer>
 <!-- end footer -->
