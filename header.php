@@ -66,4 +66,4 @@
                 <img src="<?php header_image(); ?>">
             </section>
           </header>
-          <main id="content" class="row">
+          <main id="content" class="row expanded">

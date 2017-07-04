@@ -7,7 +7,8 @@
  * @since Blog Theme 1.0
  */
 get_header(); ?>
-  <section>
+  <section class="small-12 columns">
+    <div class="row">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <!-- main content -->
     <section class="small-12 columns">
@@ -30,6 +31,7 @@ get_header(); ?>
     <!-- sidebar -->
     <?php get_sidebar();?>
     <!-- end sidebar -->
+  </div>
   </section>
 <?
   get_footer();

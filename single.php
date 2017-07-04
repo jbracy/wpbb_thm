@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-  <section>
+  <section class="small-12 columns">
+    <div class="row">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
         <!-- main content -->
@@ -49,6 +50,7 @@
     <!-- end sidebar -->
     </div>
     <!-- end main content -->
+  </div>
   </section>
 <?
   get_footer();

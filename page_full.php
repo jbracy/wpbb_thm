@@ -8,7 +8,8 @@
  */
 get_header(); ?>
 
-  <section>
+  <section class="small-12 columns">
+    <div class="row">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <!-- page title-->
 
@@ -30,6 +31,7 @@ get_header(); ?>
     <!-- end main content -->
   </section>
   <!-- end main row (main content & sidebar) -->
+</div>
 </section>
 <?
   get_footer();
