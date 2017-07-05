@@ -32,3 +32,5 @@ jQuery('figure').css('width', imgWidth);
 jQuery('.display_archive > .campaign').contents().filter(function () {
     return this.nodeType === 3;
   }).remove();
+
+jQuery('section.widget_facebook_likebox').parent().attr('style','text-align: center');
