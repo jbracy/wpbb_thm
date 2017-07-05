@@ -241,12 +241,20 @@ div.main-row {
     text-align: center;
   }
 
-  section.widget ul {
-    text-align: center;
+  section.widget {
 
-    li {
-      margin-top: 0.2rem;
+    .display_archive .campaign {
+      text-align: center;
     }
+
+    ul {
+      text-align: center;
+
+      li {
+        margin-top: 0.2rem;
+      }
+    }
+
   }
 }
 

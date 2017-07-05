@@ -28,3 +28,7 @@ jQuery('iframe').each(function () {
 
 var imgWidth = jQuery('.gallery-icon img').css('width');
 jQuery('figure').css('width', imgWidth);
+
+jQuery('.display_archive > .campaign').contents().filter(function () {
+    return this.nodeType === 3;
+  }).remove();
