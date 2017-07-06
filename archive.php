@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-  <section class="small-12 columns">
-    <div class="row">
     <!-- main content -->
     <section class="small-12 large-9 columns">
       <h1 class="text-center"><?php the_archive_title() ?></h1>
@@ -8,7 +6,7 @@
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
         ?>
         <ul>
-          <li><h4><a href="<?php the_permalink(); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> - <small><? the_date(); ?></small></h4></li>
+          <li><h4><a href="<?php the_permalink(); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> - <small style="color: #9b9b9b"><? the_date(); ?></small></h4></li>
         </ul>
         <?php endwhile; else : ?>
           <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
@@ -31,6 +29,4 @@
     <!-- sidebar -->
     <?php get_sidebar(); ?>
     <!-- end sidebar -->
-    </div>
-  </section>
 <? get_footer(); ?>

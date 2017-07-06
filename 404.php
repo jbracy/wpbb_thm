@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <section>
+  <section class="small-12 large-9 columns">
     <!-- page title-->
       <header class="small-12 columns text-center">
         <h1>4Village0Dump4</h1>
@@ -17,4 +17,7 @@
     </section>
     <!-- end main content -->
   </section>
-<?php get_footer(); ?>
+  <?php 
+    get_sidebar();
+    get_footer();
+  ?>

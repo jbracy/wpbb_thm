@@ -7,11 +7,9 @@
  * @since Blog Theme 1.0
  */
 get_header(); ?>
-  <section class="small-12 columns">
-    <div class="row">
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <!-- main content -->
     <section class="small-12 columns">
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <!-- page title-->
         <header class="text-center">
           <h1><?php the_title();?></h1>
@@ -23,13 +21,13 @@ get_header(); ?>
             <?php the_content(); ?>
           </div>
       </div>
-    </section>
     <?php endwhile; else : ?>
-    	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <div class="row">
+          <div class="post post-content">
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+          </div>
+      </div>
     <?php endif; ?>
+    </section>
     <!-- end main content -->
-  </div>
-  </section>
-<?
-  get_footer();
-?>
+<? get_footer(); ?>

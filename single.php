@@ -1,20 +1,17 @@
 <?php get_header(); ?>
-  <section class="small-12 columns">
-    <div class="row">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
         <!-- main content -->
-        <article class="small-12 large-8 columns post-content">
+        <article class="small-12 large-9 columns post-content">
           <!-- page title-->
-          <header class="text-center">
-              <h1><?php the_title();?></h1>
-              <p class="subheader post-date"><?php the_date(); ?></p>
-              <?php
-              if ( has_post_thumbnail() ) {
-              	the_post_thumbnail();
-              }
-              ?>
-          </header>
+          <div id="post-header" class="text-center">
+            <h1><?php the_title();?></h1>
+            <p class="subheader post-date"><?php the_date(); ?></p>
+            <?php
+            if ( has_post_thumbnail() ) {
+            	the_post_thumbnail();
+            }
+            ?>
+          </div>
           <!-- end page title-->
 
           <div class="post">
@@ -50,8 +47,4 @@
     <!-- end sidebar -->
     </div>
     <!-- end main content -->
-  </div>
-  </section>
-<?
-  get_footer();
-?>
+<? get_footer(); ?>

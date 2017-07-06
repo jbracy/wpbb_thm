@@ -1,6 +1,4 @@
   <?php get_header(); ?>
-    <section class="small-12 columns">
-      <div class="row">
       <!-- main content -->
       <section class="small-12 large-9 columns">
         <h1 class="text-center"><?php printf( 'Search Results For:<br/>'. get_search_query() ); ?></h1>
@@ -48,6 +46,4 @@
       <!-- sidebar -->
       <?php get_sidebar(); ?>
       <!-- end sidebar -->
-      </div>
-    </section>
   <? get_footer(); ?>

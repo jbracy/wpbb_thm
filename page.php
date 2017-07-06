@@ -1,25 +1,19 @@
 <?php get_header(); ?>
-  <section class="small-12 columns">
-    <div class="row">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
     <!-- main content -->
-    <section class="small-12 large-8 columns">
+    <section class="small-12 large-9 columns main-content">
       <!-- page title-->
-        <header class="text-center">
+        <div id="page-header" class="text-center">
           <h1><?php the_title();?></h1>
-        </header>
+        </div>
       <!-- end page title-->
-
-      <div class="row">
-          <div class="post post-content">
-            <?php
-              if ( has_post_thumbnail() ) {
-              	the_post_thumbnail();
-              }
-              the_content();
-              ?>
-          </div>
+      <div class="post post-content">
+        <?php
+          if ( has_post_thumbnail() ) {
+          	the_post_thumbnail();
+          }
+          the_content();
+          ?>
       </div>
     </section>
     <?php endwhile; else : ?>
@@ -29,8 +23,4 @@
     <!-- sidebar -->
     <?php get_sidebar(); ?>
     <!-- end sidebar -->
-  </div>
-  </section>
-<?
-  get_footer();
-?>
+<? get_footer(); ?>
