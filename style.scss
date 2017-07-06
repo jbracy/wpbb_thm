@@ -9,9 +9,6 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu
 Text Domain: jeb_beach_basic
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 */
 
 /* Define our colors */
@@ -355,6 +352,8 @@ div.callout {
   }
   @media only screen and (max-width: 63rem) {
     padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-top: 1px solid #cacaca;
   }
 

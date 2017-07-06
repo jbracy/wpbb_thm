@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-  <section class="small-12 columns">
-    <div class="row">
     <!-- main content -->
     <section class="medium-12 large-9 columns main-content">
       <div class="posts-row row small-up-1 medium-up-2">
@@ -41,8 +39,4 @@
   <!-- sidebar -->
   <?php get_sidebar(); ?>
   <!-- end sidebar -->
-</div>
-  </section>
-<?
-  get_footer();
-?>
+<? get_footer(); ?>

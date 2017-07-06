@@ -150,6 +150,22 @@ function jeb_beach_basic_features()  {
 
   add_action( 'wp_enqueue_scripts', 'jeb_beach_basic_scripts' );
 
+	function jeb_beach_basic_google_analytics() {
+		?>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-102035003-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+<?php
+	}
+
+	add_action( 'wp_footer', 'jeb_beach_basic_google_analytics');
+
   function jeb_beach_basic_format_comments($comment, $args, $depth) {
     ?>
     <li <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php echo comment_ID(); ?>">
