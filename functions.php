@@ -142,7 +142,7 @@ function jeb_beach_basic_features()  {
   function jeb_beach_basic_scripts() {
     wp_enqueue_style( 'foundation', get_template_directory_uri() . '/assets/css/foundation.min.css');
     wp_enqueue_style( 'foundation-icons', get_template_directory_uri() . '/assets/css/foundation-icons/foundation-icons.css');
-		wp_enqueue_style( 'main', get_stylesheet_uri(), array(), 1.1);
+		wp_enqueue_style( 'main', get_stylesheet_uri(), array(), 1.2);
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/js/vendor/foundation.min.js', array('jquery'), null, true);
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), null, true);
   	wp_enqueue_script( 'comment-reply' );
