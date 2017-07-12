@@ -40,7 +40,6 @@ get_header(); ?>
           <?php dynamic_sidebar('home-3');?>
         </div>
       <?php endif; ?>
-    <div class="row">
   </section>
   <!-- end sidebar -->
 <?

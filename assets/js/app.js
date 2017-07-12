@@ -34,5 +34,3 @@ jQuery('.display_archive > .campaign').contents().filter(function () {
   }).remove();
 
 jQuery('section.widget_facebook_likebox').parent().attr('style', 'text-align: center');
-
-jQuery('figure').each(function() {jQuery(this).attr('style','max-width: 100%')})
