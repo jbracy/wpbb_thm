@@ -145,23 +145,25 @@ function jeb_beach_basic_features()  {
 		wp_enqueue_style( 'main', get_stylesheet_uri(), array(), 1.2);
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/js/vendor/foundation.min.js', array('jquery'), null, true);
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), null, true);
-  	wp_enqueue_script( 'comment-reply' );
 	}
 
   add_action( 'wp_enqueue_scripts', 'jeb_beach_basic_scripts' );
 
 	function jeb_beach_basic_google_analytics() {
+		if ( ! empty(get_theme_mod('jebbb_theme_google_analytics')) )
+		{
 		?>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-102035003-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
+			  ga('create', '<?php echo get_theme_mod('jebbb_theme_google_analytics', ''); ?>', 'auto');
+			  ga('send', 'pageview');
+			</script>
 <?php
+		}
 	}
 
 	add_action( 'wp_footer', 'jeb_beach_basic_google_analytics');

@@ -175,6 +175,19 @@ function jeb_beach_basic_customize_register($wp_customize) {
           'section' => 'jeb_beach_basic_theme_options', # Layout Section
           'type' => 'text', # Type of control: text input
   ));
+
+  # Add Google Analytics tracking
+  $wp_customize->add_setting('jebbb_theme_google_analytics', array(
+      'capability' => 'edit_theme_options',
+      'type'       => 'theme_mod',
+      'default'       => 'Google Analytics ID goes here.', # Prompt for GA ID
+  ));
+
+  $wp_customize->add_control('jebbb_theme_google_analytics', array(
+          'label' => 'Google Analytics Tracking', # Label of text form
+          'section' => 'jeb_beach_basic_theme_options', # Layout Section
+          'type' => 'text', # Type of control: text input
+  ));
 }
 add_action('customize_register', 'jeb_beach_basic_customize_register');
 ?>

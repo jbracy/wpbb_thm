@@ -2,7 +2,7 @@
   <section class="small-12 large-9 columns">
     <!-- page title-->
       <header class="small-12 columns text-center">
-        <h1>4Village0Dump4</h1>
+        <h1>4 Village 0 Dump 4</h1>
       </header>
     <!-- end page title-->
 
@@ -17,7 +17,7 @@
     </section>
     <!-- end main content -->
   </section>
-  <?php 
+  <?php
     get_sidebar();
     get_footer();
   ?>

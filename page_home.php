@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 
-  <section class="small-12 columns">
+  <section class="small-10 small-offset-1 columns">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <!-- main content -->
@@ -21,7 +21,7 @@ get_header(); ?>
     <!-- end main content -->
   </section>
   <!-- sidebar -->
-  <section class="small-12 columns home-widgets">
+  <section class="small-10 small-offset-1 end columns home-widgets">
     <hr>
     <h3 class="home-widgets-title">Recent News</h3>
     <div class="row">

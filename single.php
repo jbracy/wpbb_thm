@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <!-- main content -->
-        <article class="small-12 large-9 columns post-content">
+        <article class="small-12 large-7 large-offset-1 columns post-content">
           <!-- page title-->
           <div id="post-header" class="text-center">
             <h1><?php the_title();?></h1>

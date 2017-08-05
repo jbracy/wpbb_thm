@@ -8,7 +8,7 @@
  */
 get_header(); ?>
     <!-- main content -->
-    <section class="small-12 columns">
+    <section class="small-10 small-offset-1 columns">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <!-- page title-->
         <header class="text-center">
