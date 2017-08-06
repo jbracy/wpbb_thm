@@ -35,9 +35,7 @@
         			comments_template();
         		}
             ?>
-            <div id="respond" class="comment-respond">
              <?php get_template_part('comment_form'); ?>
-        		</div>
           </div>
         </article>
 

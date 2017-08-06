@@ -236,9 +236,11 @@ div.callout {
     color: #913425; }
 .comment-respond form input.label.alert {
   background-color: transparent;
-  border: 1px dotted #cc4b37; }
+  border: 1px dotted #cc4b37;
+  color: #000; }
 .comment-respond form textarea.label.alert {
-  border: 1px dotted #cc4b37; }
+  border: 1px dotted #cc4b37;
+  color: #000; }
 
 .sidebar {
   padding-left: 2rem;
