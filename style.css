@@ -154,6 +154,8 @@ main#content {
     margin-bottom: 1rem; }
   main#content .post-content {
     overflow: hidden; }
+    main#content .post-content p {
+      font-size: 1.125rem; }
   main#content .media-object {
     margin-bottom: 4rem; }
 

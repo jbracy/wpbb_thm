@@ -13,10 +13,11 @@
 ?>
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="input-group">
-    <span class="input-group-label"><i class="fi-magnifying-glass"></i></span>
-    <input class="input-group-field search-field" type="search" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'twentysixteen' ); ?>" value="<?php echo get_search_query(); ?>" name="s">
+    <input class="input-group-field search-field" type="search" placeholder="Search for..." value="<?php echo get_search_query(); ?>" name="s">
     <div class="input-group-button">
-      <input type="submit" class="button" value="Submit">
+      <button type="submit" class="button" value="Submit">
+				<i class="fi-magnifying-glass"></i>
+			</button>
     </div>
   </div>
 </form>
