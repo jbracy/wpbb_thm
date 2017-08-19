@@ -1,7 +1,7 @@
 <?php
 
 // Register Theme Features
-function jeb_beach_basic_features()  {
+function gps_bb_features()  {
 
 	// Add theme support for Post Formats
 	add_theme_support( 'post-formats', array( 'gallery', 'image', 'video', 'audio' ) );
@@ -52,65 +52,65 @@ function jeb_beach_basic_features()  {
 ) );
 
   // Add theme support for sidebars
-  function jeb_beach_basic_widgets_init() {
+  function gps_bb_widgets_init() {
   	register_sidebar( array(
-  		'name'          => __( 'Sidebar', 'jeb_beach_basic' ),
+  		'name'          => __( 'Sidebar', 'gps_bb' ),
   		'id'            => 'sidebar-1',
-  		'description'   => __( 'Add widgets here to appear in your sidebar.', 'jeb_beach_basic' ),
+  		'description'   => __( 'Add widgets here to appear in your sidebar.', 'gps_bb' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
   		'before_title'  => '<h4 class="widget-title">',
   		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
-  		'name'          => __( 'Home Sidebar Left', 'jeb_beach_basic' ),
+  		'name'          => __( 'Home Sidebar Left', 'gps_bb' ),
   		'id'            => 'home-1',
-  		'description'   => __( 'Add widgets here to appear on your homepage.', 'jeb_beach_basic' ),
+  		'description'   => __( 'Add widgets here to appear on your homepage.', 'gps_bb' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
   		'before_title'  => '<h4 class="widget-title">',
   		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
-  		'name'          => __( 'Home Sidebar Middle', 'jeb_beach_basic' ),
+  		'name'          => __( 'Home Sidebar Middle', 'gps_bb' ),
   		'id'            => 'home-2',
-  		'description'   => __( 'Add widgets here to appear on your homepage.', 'jeb_beach_basic' ),
+  		'description'   => __( 'Add widgets here to appear on your homepage.', 'gps_bb' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
   		'before_title'  => '<h4 class="widget-title">',
   		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
-  		'name'          => __( 'Home Sidebar Right', 'jeb_beach_basic' ),
+  		'name'          => __( 'Home Sidebar Right', 'gps_bb' ),
   		'id'            => 'home-3',
-  		'description'   => __( 'Add widgets here to appear on your homepage.', 'jeb_beach_basic' ),
+  		'description'   => __( 'Add widgets here to appear on your homepage.', 'gps_bb' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
   		'before_title'  => '<h4 class="widget-title">',
   		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
-  		'name'          => __( 'Footer Left', 'jeb_beach_basic' ),
+  		'name'          => __( 'Footer Left', 'gps_bb' ),
   		'id'            => 'footer-1',
-  		'description'   => __( 'Add widgets here to appear in your footer.', 'jeb_beach_basic' ),
+  		'description'   => __( 'Add widgets here to appear in your footer.', 'gps_bb' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
   		'before_title'  => '<h4 class="widget-title">',
   		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
-  		'name'          => __( 'Footer Middle', 'jeb_beach_basic' ),
+  		'name'          => __( 'Footer Middle', 'gps_bb' ),
   		'id'            => 'footer-2',
-  		'description'   => __( 'Add widgets here to appear in your footer.', 'jeb_beach_basic' ),
+  		'description'   => __( 'Add widgets here to appear in your footer.', 'gps_bb' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
   		'before_title'  => '<h4 class="widget-title">',
   		'after_title'   => '</h4>',
   	) );
   	register_sidebar( array(
-  		'name'          => __( 'Footer Right', 'jeb_beach_basic' ),
+  		'name'          => __( 'Footer Right', 'gps_bb' ),
   		'id'            => 'footer-3',
-  		'description'   => __( 'Add widgets here to appear in your footer.', 'jeb_beach_basic' ),
+  		'description'   => __( 'Add widgets here to appear in your footer.', 'gps_bb' ),
   		'before_widget' => '<section id="%1$s" class="widget %2$s">',
   		'after_widget'  => '</section>',
   		'before_title'  => '<h4 class="widget-title">',
@@ -118,28 +118,28 @@ function jeb_beach_basic_features()  {
   	) );
   }
 
-  add_action( 'widgets_init', 'jeb_beach_basic_widgets_init' );
+  add_action( 'widgets_init', 'gps_bb_widgets_init' );
 
 	// Add theme support for custom CSS in the TinyMCE visual editor
 	add_editor_style();
 
   // Register the main_menu
-  function register_jeb_beach_basic_menu() {
+  function register_gps_bb_menu() {
     register_nav_menu('primary',__( 'Main Menu' ));
   }
-  add_action( 'init', 'register_jeb_beach_basic_menu' );
+  add_action( 'init', 'register_gps_bb_menu' );
 
-  function jeb_beach_basic_excerpt_length( $length ) {
+  function gps_bb_excerpt_length( $length ) {
       return 50;
   }
-  add_filter( 'excerpt_length', 'jeb_beach_basic_excerpt_length', 999 );
+  add_filter( 'excerpt_length', 'gps_bb_excerpt_length', 999 );
 
-  function jeb_beach_basic_excerpt_more( $more ) {
+  function gps_bb_excerpt_more( $more ) {
       return '...';
   }
-  add_filter( 'excerpt_more', 'jeb_beach_basic_excerpt_more' );
+  add_filter( 'excerpt_more', 'gps_bb_excerpt_more' );
 
-  function jeb_beach_basic_scripts() {
+  function gps_bb_scripts() {
     wp_enqueue_style( 'foundation', get_template_directory_uri() . '/assets/css/foundation.min.css');
     wp_enqueue_style( 'foundation-icons', get_template_directory_uri() . '/assets/css/foundation-icons/foundation-icons.css');
 		wp_enqueue_style( 'main', get_stylesheet_uri(), array(), 1.2);
@@ -147,9 +147,9 @@ function jeb_beach_basic_features()  {
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), null, true);
 	}
 
-  add_action( 'wp_enqueue_scripts', 'jeb_beach_basic_scripts' );
+  add_action( 'wp_enqueue_scripts', 'gps_bb_scripts' );
 
-	function jeb_beach_basic_google_analytics() {
+	function gps_bb_google_analytics() {
 		if ( ! empty(get_theme_mod('jebbb_theme_google_analytics')) )
 		{
 		?>
@@ -166,7 +166,7 @@ function jeb_beach_basic_features()  {
 		}
 	}
 
-	add_action( 'wp_footer', 'jeb_beach_basic_google_analytics');
+	add_action( 'wp_footer', 'gps_bb_google_analytics');
 
 	function facebook_js() {
 		?>
@@ -182,7 +182,7 @@ function jeb_beach_basic_features()  {
 	}
 	add_action( 'wp_footer', 'facebook_js');
 
-  function jeb_beach_basic_format_comments($comment, $args, $depth) {
+  function gps_bb_format_comments($comment, $args, $depth) {
     ?>
     <li <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php echo comment_ID(); ?>">
         <div class="comment-meta">
@@ -200,6 +200,7 @@ function jeb_beach_basic_features()  {
     </li>
     <?php
   }
+	
   function comment_validation_init() {
   if(is_singular() && comments_open() ) { ?>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -253,7 +254,7 @@ function jeb_beach_basic_features()  {
 	require get_template_directory() . '/inc/customizer.php';
 
 	/*Apply theme mods */
-	function jeb_beach_basic_customize_css()
+	function gps_bb_customize_css()
 	{
 	    ?>
 	         <style type="text/css">
@@ -267,9 +268,9 @@ function jeb_beach_basic_features()  {
 	         </style>
 	    <?php
 	}
-	add_action( 'wp_head', 'jeb_beach_basic_customize_css');
+	add_action( 'wp_head', 'gps_bb_customize_css');
 }
-add_action( 'after_setup_theme', 'jeb_beach_basic_features' );
+add_action( 'after_setup_theme', 'gps_bb_features' );
 if ( ! isset( $content_width ) ) {
     $content_width = 1440;
 }
