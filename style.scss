@@ -106,25 +106,46 @@ input[type="submit"]
 img.wp-post-image { display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem;}
 
 /* main header elements */
-.header {
-text-align: center;
-background: $base-blue;
-  h1 {
-    margin-bottom: 0px;
+header {
+  .hero-wrapper {
+    background-color: $base-blue;
+  }
+  .hero-section {
+  background-color: $base-blue;
+  background-size: cover;
+  height: 18rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 39.9375em) {
+    margin-bottom: 3rem;
   }
 
-  .headline {
-    color: $white;
-    font-family: "Bradley Hand", "Serif";
-    a {
+  .hero-section-text {
+    text-shadow: 1px 1px 2px $black;
+    margin: 0 1rem;
+
+    .headline {
       color: $white;
+      font-size: 4rem;
+      font-family: "Bradley Hand", "Serif";
+      margin-bottom: 0px;
+      a {
+        color: $white;
+      }
     }
+  }
   }
 
   nav {
+    background-color: $base-blue;
+    margin-bottom: 3rem;
+
     div.menu-centered {
       height: 2.46em;
-      .menu {
+
+      ul.menu.dropdown {
         li.is-dropdown-submenu-parent {
           a {
             &:after {
@@ -167,14 +188,9 @@ div.title-bar {
   }
 }
 
-.hero {
-  margin-bottom: 2rem;
-}
-
 /* page content */
 main{
   &#content {
-    margin: 0 0.5rem;
 
     @media screen and (max-width: 39.9375em) {
       padding: 0 1rem;

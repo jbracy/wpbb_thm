@@ -36,13 +36,18 @@
         <div class="off-canvas-content" data-off-canvas-content>
           <!-- header -->
           <header class="row expanded">
-            <section class="header small-12 columns">
-              <h1 class="headline"><a href="<? echo get_home_url(); ?>"><? bloginfo('name'); ?></a></h1>
-              <h5 class="hide-for-small-only"><small><? bloginfo('description')?></small></h5>
+            <div class="hero-wrapper">
+              <div class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(<?php header_image(); ?>) 50% no-repeat;">
+                <div class="hero-section-text">
+                  <h1 class="headline"><a href="<? echo get_home_url(); ?>"><? bloginfo('name'); ?></a></h1>
+                  <h4><small><? bloginfo('description')?></small></h4>
+                </div>
+              </div>
+            </div>
 
               <!-- main nav bar -->
-              <nav class="row hide-for-small-only">
-                <div class="small-12 columns">
+              <nav class="small-12 columns hide-for-small-only">
+
                   <div class="menu-centered expanded">
                     <?php
                     //load up our main_nav and make sure sub-menus have menu class for foundation compatability
@@ -58,12 +63,8 @@
                     );
                     ?>
                   </div>
-                </div>
+
               </nav>
-            </section>
-            <!-- hero -->
-            <section class="hero text-center">
-                <img src="<?php header_image(); ?>">
-            </section>
+
           </header>
           <main id="content" class="row">
