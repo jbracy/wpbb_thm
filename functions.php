@@ -168,6 +168,20 @@ function jeb_beach_basic_features()  {
 
 	add_action( 'wp_footer', 'jeb_beach_basic_google_analytics');
 
+	function facebook_js() {
+		?>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+  	var js, fjs = d.getElementsByTagName(s)[0];
+  	if (d.getElementById(id)) return;
+  	js = d.createElement(s); js.id = id;
+  	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+<?
+	}
+	add_action( 'wp_footer', 'facebook_js');
+
   function jeb_beach_basic_format_comments($comment, $args, $depth) {
     ?>
     <li <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php echo comment_ID(); ?>">
