@@ -172,6 +172,10 @@ header {
           .input-group-button .button {
             background-color: $light-blue;
             height: 2rem;
+
+            &:hover {
+              background-color: $dark-blue;
+            }
           }
         }
 

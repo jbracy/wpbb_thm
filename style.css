@@ -150,6 +150,8 @@ header nav {
         header nav div.top-bar div.top-bar-left .input-group .input-group-button .button, header nav div.top-bar div.top-bar-right .input-group .input-group-button .button {
           background-color: #63ace4;
           height: 2rem; }
+          header nav div.top-bar div.top-bar-left .input-group .input-group-button .button:hover, header nav div.top-bar div.top-bar-right .input-group .input-group-button .button:hover {
+            background-color: #235a85; }
     header nav div.top-bar ul.menu.dropdown li.is-dropdown-submenu-parent a:after {
       border-color: #fff transparent transparent; }
     header nav div.top-bar ul.menu.dropdown li.is-dropdown-submenu-parent ul {
