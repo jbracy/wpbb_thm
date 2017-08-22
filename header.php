@@ -47,8 +47,8 @@
 
               <!-- main nav bar -->
               <nav class="small-12 columns hide-for-small-only">
-
-                  <div class="menu-centered expanded">
+                <div class="top-bar row">
+                  <div class="top-bar-left">
                     <?php
                     //load up our main_nav and make sure sub-menus have menu class for foundation compatability
                     echo str_replace('sub-menu', 'sub-menu menu', wp_nav_menu( array(
@@ -63,7 +63,12 @@
                     );
                     ?>
                   </div>
-
+                  <div class="top-bar-right">
+                  <ul class="menu">
+                    <li><?get_search_form( $echo = true )?></li>
+                  </ul>
+                  </div>
+                </div>
               </nav>
 
           </header>

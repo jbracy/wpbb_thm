@@ -18,6 +18,7 @@ $light-blue: #63ace4;//9ecae6
 $light-grey: #e6e6e6;
 $sand: #C2B5B1;
 $sand-dark: #9B908D;
+$sand-light: lighten($sand,20);
 $off-white: #e6e6e6;
 $white: #fff;
 $black: #000;
@@ -56,6 +57,11 @@ ul {
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   color: $off-white;
 }
+
+.off-canvas-content {
+  background-color: $sand-light;
+}
+
 img.rounded-image {
   border: 1px solid #979797;
   border-radius: 100px;
@@ -118,9 +124,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 39.9375em) {
-    margin-bottom: 3rem;
-  }
 
   .hero-section-text {
     text-shadow: 1px 1px 2px $black;
@@ -140,10 +143,39 @@ header {
 
   nav {
     background-color: $base-blue;
-    margin-bottom: 3rem;
 
-    div.menu-centered {
-      height: 2.46em;
+    div.top-bar {
+      background-color: $base-blue;
+      max-height: 2.46rem;
+      padding-top: 0;
+
+      div.top-bar-left {
+        position:relative;
+        left: 5.25rem;
+      }
+      div.top-bar-right{
+        padding-top: 0.2rem;
+      }
+      div.top-bar-left, div.top-bar-right {
+        background-color: $base-blue;
+
+        ul.menu {
+          background-color: inherit;
+        }
+
+        .input-group {
+          margin-bottom: 0;
+
+          .input-group-field {
+            height: 2rem;
+          }
+          .input-group-button .button {
+            background-color: $light-blue;
+            height: 2rem;
+          }
+        }
+
+      }
 
       ul.menu.dropdown {
         li.is-dropdown-submenu-parent {
@@ -191,10 +223,9 @@ div.title-bar {
 /* page content */
 main{
   &#content {
-
-    @media screen and (max-width: 39.9375em) {
-      padding: 0 1rem;
-    }
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: $white;
 
     p.subheader.post-date {
       text-align: center;
@@ -288,8 +319,20 @@ div.main-row {
   .next, .previous {
 
   }
-  li {
-  border: 1px solid #cacaca;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .pagination:after {
+    display: inline-block;
+    content: attr(data-page) ' of ' attr(data-total);
+    position: relative;
+    text-align: center;
+    width: 80px;
+    right: 80px;
+  }
+  .next {
+    position: relative;
+    left: 4rem;
   }
 }
 
@@ -402,7 +445,6 @@ section.widget.facebook_widget_likebox {
 
 footer {
   background-color: $sand;
-  margin: 20px 0 0 0;
   padding-top: 1rem;
 
   .footer-widget {

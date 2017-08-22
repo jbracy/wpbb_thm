@@ -37,6 +37,9 @@ ul {
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   color: #e6e6e6; }
 
+.off-canvas-content {
+  background-color: #efebea; }
+
 img.rounded-image {
   border: 1px solid #979797;
   border-radius: 100px; }
@@ -115,9 +118,6 @@ header .hero-section {
   display: flex;
   align-items: center;
   justify-content: center; }
-  @media screen and (max-width: 39.9375em) {
-    header .hero-section {
-      margin-bottom: 3rem; } }
   header .hero-section .hero-section-text {
     text-shadow: 1px 1px 2px #000;
     margin: 0 1rem; }
@@ -129,20 +129,37 @@ header .hero-section {
       header .hero-section .hero-section-text .headline a {
         color: #fff; }
 header nav {
-  background-color: #3c77a8;
-  margin-bottom: 3rem; }
-  header nav div.menu-centered {
-    height: 2.46em; }
-    header nav div.menu-centered ul.menu.dropdown li.is-dropdown-submenu-parent a:after {
+  background-color: #3c77a8; }
+  header nav div.top-bar {
+    background-color: #3c77a8;
+    max-height: 2.46rem;
+    padding-top: 0; }
+    header nav div.top-bar div.top-bar-left {
+      position: relative;
+      left: 5.25rem; }
+    header nav div.top-bar div.top-bar-right {
+      padding-top: 0.2rem; }
+    header nav div.top-bar div.top-bar-left, header nav div.top-bar div.top-bar-right {
+      background-color: #3c77a8; }
+      header nav div.top-bar div.top-bar-left ul.menu, header nav div.top-bar div.top-bar-right ul.menu {
+        background-color: inherit; }
+      header nav div.top-bar div.top-bar-left .input-group, header nav div.top-bar div.top-bar-right .input-group {
+        margin-bottom: 0; }
+        header nav div.top-bar div.top-bar-left .input-group .input-group-field, header nav div.top-bar div.top-bar-right .input-group .input-group-field {
+          height: 2rem; }
+        header nav div.top-bar div.top-bar-left .input-group .input-group-button .button, header nav div.top-bar div.top-bar-right .input-group .input-group-button .button {
+          background-color: #63ace4;
+          height: 2rem; }
+    header nav div.top-bar ul.menu.dropdown li.is-dropdown-submenu-parent a:after {
       border-color: #fff transparent transparent; }
-    header nav div.menu-centered ul.menu.dropdown li.is-dropdown-submenu-parent ul {
+    header nav div.top-bar ul.menu.dropdown li.is-dropdown-submenu-parent ul {
       border: none;
       background-color: #63ace4; }
-      header nav div.menu-centered ul.menu.dropdown li.is-dropdown-submenu-parent ul a:hover {
+      header nav div.top-bar ul.menu.dropdown li.is-dropdown-submenu-parent ul a:hover {
         color: #fff; }
-    header nav div.menu-centered ul.menu.dropdown a {
+    header nav div.top-bar ul.menu.dropdown a {
       color: #fff; }
-      header nav div.menu-centered ul.menu.dropdown a:hover {
+      header nav div.top-bar ul.menu.dropdown a:hover {
         background-color: #235a85; }
 
 div.title-bar {
@@ -156,19 +173,20 @@ div.title-bar {
     width: 100%; }
 
 /* page content */
-@media screen and (max-width: 39.9375em) {
-  main#content {
-    padding: 0 1rem; } }
-main#content p.subheader.post-date {
-  text-align: center;
-  line-height: .5;
-  margin-bottom: 1rem; }
-main#content .post-content {
-  overflow: hidden; }
-  main#content .post-content p {
-    font-size: 1.125rem; }
-main#content .media-object {
-  margin-bottom: 4rem; }
+main#content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #fff; }
+  main#content p.subheader.post-date {
+    text-align: center;
+    line-height: .5;
+    margin-bottom: 1rem; }
+  main#content .post-content {
+    overflow: hidden; }
+    main#content .post-content p {
+      font-size: 1.125rem; }
+  main#content .media-object {
+    margin-bottom: 4rem; }
 
 /* main content area */
 section.main-content .posts-row .column {
@@ -209,9 +227,19 @@ div.main-row {
 
 .pagination .current {
   background-color: #3c77a8; }
-.pagination li {
-  border: 1px solid #cacaca; }
 
+@media screen and (max-width: 39.9375em) {
+  .pagination:after {
+    display: inline-block;
+    content: attr(data-page) " of " attr(data-total);
+    position: relative;
+    text-align: center;
+    width: 80px;
+    right: 80px; }
+
+  .next {
+    position: relative;
+    left: 4rem; } }
 div.callout {
   border-radius: 10px; }
 
@@ -282,7 +310,6 @@ section.widget.facebook_widget_likebox {
 
 footer {
   background-color: #C2B5B1;
-  margin: 20px 0 0 0;
   padding-top: 1rem; }
   footer .footer-widget .widget-title {
     border: none;

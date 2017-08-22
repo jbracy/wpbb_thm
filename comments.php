@@ -30,7 +30,7 @@ if ( post_password_required() ) {
 					<?php
 						wp_list_comments( array(
 		          	'style'             => 'ul',
-		          	'callback'          => 'jeb_beach_basic_format_comments',
+		          	'callback'          => 'gps_bb_format_comments',
 								'max_depth'					=> '2'
 						) );
 		      ?>

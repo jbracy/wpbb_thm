@@ -1,9 +1,11 @@
 <?php get_header(); ?>
     <!-- main content -->
-    <section class="small-12 large-9 columns main-content">
+    <section class="small-10 small-offset-1 large-7 large-offset-1 columns main-content">
       <div class="posts-row row small-up-1 medium-up-2">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-
+          $total_pages = $wp_query->max_num_pages;
+          $current_page = $wp_query->get('paged');
+          if ($current_page == 0) {$current_page = 1;}
         ?>
         <div class="column">
           <h3 class="text-center"><a href="<?php the_permalink(); ?>" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
@@ -31,7 +33,7 @@
           	'type'               => 'list'
           );
           $return = paginate_links( $args );
-          echo str_replace( "<ul class='page-numbers'>", '<ul class="pagination text-center" role="navigation" aria-label="Pagination">', $return );
+          echo str_replace( "<ul class='page-numbers'>", '<ul class="pagination text-center" role="navigation" aria-label="Pagination" data-page="'.$current_page.'" data-total="'.$total_pages.'">', $return );
           ?>
       </div>
     </section>

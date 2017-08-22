@@ -9,13 +9,13 @@
 get_header(); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <!-- page title-->
-    <header class="small-12 columns text-center">
+    <header class="small-10 small-offset-1 columns text-center">
       <h1><?php the_title();?></h1>
     </header>
   <!-- end page title-->
 
   <!-- main row -->
-  <section class="small-12 columns">
+  <section class="small-10 small-offset-1 columns">
     <!-- main content -->
     <div class="post">
       <?php the_content(); ?>
